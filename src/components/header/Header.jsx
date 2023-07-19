@@ -1,31 +1,38 @@
-import React from "react";
 import "./header.scss";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const scrollToContact = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <header>
       <div>
         <ul className="nav_bar">
-          <NavLink exact="true" to="/" activeclassname="active">
+          <NavLink to="/" className="active">
             <li className="nav_item">Accueil</li>
           </NavLink>
-          <NavLink exact="true" to="/" activeclassname="active">
-            <li className="nav_item">Présentation</li>
+          <NavLink to="/" className="active">
+            <li className="nav_item" onClick={() => scrollToContact('presentation')}>Présentation</li>
           </NavLink>
-          <NavLink exact="true" to="/" activeclassname="active">
-            <li className="nav_item">Réalisation</li>
-          </NavLink>
-          <NavLink exact="true" to="/" activeclassname="active">
-            <li className="nav_item">Compétences</li>
-          </NavLink>
-          <NavLink exact="true" to="/" activeclassname="active">
-            <li className="nav_item">Contact</li>
-          </NavLink>
+          <li className="nav_item" onClick={() => scrollToContact('projects')}>
+            Réalisation
+          </li>
+          <li className="nav_item" onClick={() => scrollToContact('skills')}>
+            Compétences
+          </li>
+          <li className="nav_item" onClick={() => scrollToContact('contact')}>
+            Contact
+          </li>
         </ul>
       </div>
     </header>
   );
+  
 };
 
 export default Header;

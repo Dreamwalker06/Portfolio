@@ -4,8 +4,10 @@ import SousTitre from '../sousTitre/SousTitre';
 
 const Skills = () => {
     return (
-        <div className='skills'>
-            <SousTitre title="MES COMPETENCES" />
+        <div id="skills" className='skills-container'>
+        <SousTitre title="MES COMPETENCES" />
+        <p className='underscore'>______</p>
+        <p className='skills-text'>Blabla</p>
         </div>
     );
 };

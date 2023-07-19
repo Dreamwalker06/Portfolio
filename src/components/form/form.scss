@@ -34,12 +34,13 @@ textarea {
     transition: 0.5s ease-in-out;
 }
 
-button {
+.button_submit {
     width: 50vh;
     padding : 5px 20px;
     font-size: 12px;
     letter-spacing: 1px;
-        background-color: RGB(52, 52, 52);
+        background-color: RGB(52, 52, 52);  
+    /*     background-color: RGB(1, 17, 32);  */
     border: 1px solid #E7E7E7;
     color: white;
     transition: box-shadow 0.5s ease-in-out;
@@ -59,7 +60,7 @@ input[type=text] {
     margin-top: 25px;
 }
 
-button:hover {
+.button_submit:hover {
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
@@ -68,3 +69,14 @@ button:hover {
 input:focus , textarea:focus {
     border: 1px solid #999799;
   }
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
